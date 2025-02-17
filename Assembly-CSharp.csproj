@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\Animal\AnimalStates\FleeState.cs" />
     <Compile Include="Assets\Scripts\UI\FaceCamera.cs" />
     <Compile Include="Assets\AQUAS-Lite\Scripts\AQUAS_Lite_Camera.cs" />
+    <Compile Include="Assets\Scripts\Utils\BackToMenu.cs" />
     <Compile Include="Assets\Scripts\Animal\AnimalStates\MateState.cs" />
     <Compile Include="Assets\Scripts\Animal\AnimalStates\WanderState.cs" />
     <Compile Include="Assets\RTS_Camera\Demo\TargetSelector.cs" />
@@ -115,6 +116,7 @@
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
     <None Include="Assets\AQUAS-Lite\Shaders\AQUAS-Lite_Backface.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Rock_Shader.shader" />

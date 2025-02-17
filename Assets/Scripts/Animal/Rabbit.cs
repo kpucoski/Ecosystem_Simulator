@@ -16,14 +16,14 @@ namespace Animal {
             MaxfoodValue = Random.Range(30, 100);
             GetList().Add(States.Eat, new EatState(this));
             GetList().Add(States.Flee, new FleeState(this));
-            Statistics.countTotalRabbit++;
+            //Statistics.countTotalRabbit++;
             // r.Add(this);
-            Statistics.r.Add(Statistics.countTotalRabbit,new Dictionary<string, float> {
-                { "speed", speed },
-                { "vision", visionRadius },
-                { "run", runSpeed },
-                { "ttl", timeLived }
-            });
+            // Statistics.r.Add(Statistics.countTotalRabbit,new Dictionary<string, float> {
+            //     { "speed", speed },
+            //     { "vision", visionRadius },
+            //     { "run", runSpeed },
+            //     { "ttl", timeLived }
+            // });
         }
 
         public void Initialize() {

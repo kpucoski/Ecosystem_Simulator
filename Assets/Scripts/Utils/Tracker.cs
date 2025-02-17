@@ -33,9 +33,9 @@ public class Tracker : MonoBehaviour {
     }
 
     void Update() {
-        // if (Input.GetKeyDown(KeyCode.R)) {
-        //     Restart();
-        // }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Restart();
+        }
         timer += Time.deltaTime;
         if (!firstTrack && timer < 0.5f) {
             firstTrack = true;

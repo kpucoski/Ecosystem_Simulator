@@ -7,9 +7,9 @@ using UnityEngine.UIElements;
 using Utils;
 
 public class Menu : MonoBehaviour {
-    void Start() {
+    // void Start() {
         //Application.targetFrameRate = 144;
-    }
+    // }
     public void StartSim() {
         //AnimalSpawner.numFox = SettingsMenu.numFox;
         //AnimalSpawner.numRabbit = SettingsMenu.numRabbit;

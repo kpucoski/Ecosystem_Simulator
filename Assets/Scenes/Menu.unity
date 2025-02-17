@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 81127933}
   - component: {fileID: 81127932}
   - component: {fileID: 81127931}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InputField Rabbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 121541344}
   - component: {fileID: 121541343}
   - component: {fileID: 121541342}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 370893606}
   - component: {fileID: 370893608}
   - component: {fileID: 370893607}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Rabbits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 413024840}
   - component: {fileID: 413024841}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1561,13 +1561,13 @@ GameObject:
   m_Component:
   - component: {fileID: 610279385}
   - component: {fileID: 610279386}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &610279385
 Transform:
   m_ObjectHideFlags: 0
@@ -1733,7 +1733,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 442b30b2bd5f3e741a53d6452d78c0fc, type: 2}
   m_EnableTreeColliders: 1
@@ -1754,7 +1754,7 @@ Terrain:
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
+  m_SplatMapDistance: 150
   m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
@@ -1808,13 +1808,13 @@ GameObject:
   - component: {fileID: 823585850}
   - component: {fileID: 823585851}
   - component: {fileID: 823585852}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &823585850
 Transform:
   m_ObjectHideFlags: 0
@@ -2006,7 +2006,7 @@ GameObject:
   - component: {fileID: 858783742}
   - component: {fileID: 858783741}
   - component: {fileID: 858783740}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2160,7 +2160,7 @@ GameObject:
   - component: {fileID: 892039972}
   - component: {fileID: 892039974}
   - component: {fileID: 892039973}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Foxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2871,7 +2871,7 @@ GameObject:
   - component: {fileID: 1416152705}
   - component: {fileID: 1416152707}
   - component: {fileID: 1416152706}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3006,7 @@ GameObject:
   - component: {fileID: 1431373886}
   - component: {fileID: 1431373885}
   - component: {fileID: 1431373884}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InputField Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,7 +3338,7 @@ GameObject:
   - component: {fileID: 1576179876}
   - component: {fileID: 1576179875}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Tinted Background Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3548,7 +3548,7 @@ GameObject:
   - component: {fileID: 1698741065}
   - component: {fileID: 1698741067}
   - component: {fileID: 1698741066}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3681,7 +3681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735801340}
   - component: {fileID: 1735801341}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3962,6 +3962,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 65990129}
   - {fileID: 1348403435}
-  - {fileID: 267518636}
   - {fileID: 580286039}
+  - {fileID: 267518636}
   - {fileID: 673836448}

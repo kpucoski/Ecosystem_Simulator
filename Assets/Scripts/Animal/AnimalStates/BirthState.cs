@@ -1,5 +1,4 @@
 using Animal.Interfaces;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Utils;
@@ -49,11 +48,15 @@ namespace Animal.AnimalStates {
                     Genes.Mutate(b,0.2f);
 
                     if (b is Rabbit){
+                        Statistics.countTotalRabbit++;
                         ((Rabbit)b).Initialize();
+                        
                         Statistics.rabbitBirths++;
                         Statistics.countRabbit++;
+
                     }
                     else {
+                        Statistics.countTotalFox++;
                         ((Fox)b).Initialize();
                         Statistics.foxBirths++;
                         Statistics.countFox++;

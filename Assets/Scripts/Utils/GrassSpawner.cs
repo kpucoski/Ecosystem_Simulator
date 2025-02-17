@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GrassSpawner : MonoBehaviour {
@@ -15,12 +13,11 @@ public class GrassSpawner : MonoBehaviour {
         SpawnResources();
     }
 
-    // private void Update() {
-    //     if (Input.GetKeyDown(KeyCode.R)) {
-    //         DeleteResources();
-    //         SpawnResources();
-    //     }
-    // }
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+           Restart();
+        }
+    }
 
     void SpawnResources() {
         for (float x = negativePosition.x; x < positivePosition.x; x += distanceBetweenCheck) {
@@ -49,6 +46,10 @@ public class GrassSpawner : MonoBehaviour {
         foreach (Transform child in transform) {
             Destroy(child.gameObject);
         }
+    }
+
+    public void Restart() {
+        DeleteResources();
     }
     
 }

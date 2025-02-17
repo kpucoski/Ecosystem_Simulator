@@ -10,14 +10,14 @@ namespace Animal {
             base.Start();
             Init();
             GetList().Add(States.Hunt,new HuntState(this));     
-             Statistics.countTotalFox++;
+            //Statistics.countTotalFox++;
             // DeathCounter.f.Add(this);
-            Statistics.f.Add(Statistics.countTotalFox,new Dictionary<string, float> {
-                { "speed", speed },
-                { "vision", visionRadius },
-                { "run", runSpeed },
-                { "ttl", timeLived }
-            });     
+            // Statistics.f.Add(Statistics.countTotalFox,new Dictionary<string, float> {
+            //     { "speed", speed },
+            //     { "vision", visionRadius },
+            //     { "run", runSpeed },
+            //     { "ttl", timeLived }
+            // });     
         }
         
         public void Initialize() {

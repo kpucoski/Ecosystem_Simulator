@@ -599,6 +599,8 @@ namespace Animal {
             return speed >= 5;
         }
 
+        #region Movement
+
         public void GoTo(Vector3 target) {
             agent.SetDestination(target);
         }
@@ -612,6 +614,7 @@ namespace Animal {
             isRunning = false;
             agent.speed = speed;
         }
+        #endregion
 
         private Vector3 lastPosition;
         private float stuckTimer = 0f;
@@ -705,7 +708,6 @@ namespace Animal {
             return (averagePosition - _transform.position).normalized;
         }
 
-        //
         private Vector3 CalculateAlignmentForce(List<AbstractAnimal> neighbors) {
             Vector3 averageDirection = Vector3.zero;
             // foreach (var neighbor in neighbors) {

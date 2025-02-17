@@ -391,6 +391,7 @@
 "Assets/Scripts/UI/AnimalUI.cs"
 "Assets/Scripts/UI/FaceCamera.cs"
 "Assets/Scripts/Utils/AnimalSpawner.cs"
+"Assets/Scripts/Utils/BackToMenu.cs"
 "Assets/Scripts/Utils/GrassSpawner.cs"
 "Assets/Scripts/Utils/ObjectPool.cs"
 "Assets/Scripts/Utils/Statistics.cs"

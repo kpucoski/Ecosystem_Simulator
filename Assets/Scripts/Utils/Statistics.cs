@@ -27,4 +27,28 @@ public static class Statistics {
         { "Malnutrition", 0 },
         { "Old Age", 0 }
     };
+
+    static void ClearDeathStatistics() {
+        deathStatisticsFox["Malnutrition"] = 0;
+        deathStatisticsFox["Old Age"] = 0;
+        deathStatisticsRabbit["Malnutrition"] = 0;
+        deathStatisticsRabbit["Old Age"] = 0;
+        deathStatisticsRabbit["Predation"] = 0;
+    }
+    
+    public static void Restart() {
+        ClearDeathStatistics();
+        f.Clear();
+        r.Clear();
+
+        countFox = 0;
+        countRabbit = 0;
+        countTotalRabbit = 0;
+        countTotalFox = 0;
+        rabbitDeaths = 0;
+        rabbitBirths = 0;
+        foxDeaths = 0;
+        foxBirths = 0;
+        plantCount = 0;
+    }
 }

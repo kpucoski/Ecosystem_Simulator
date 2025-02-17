@@ -8,7 +8,6 @@ TagManager:
   - Water Point
   - Fox
   - Rabbit
-  - MenuCamera
   layers:
   - Default
   - TransparentFX

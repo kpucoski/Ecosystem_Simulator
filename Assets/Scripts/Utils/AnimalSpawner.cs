@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Animal;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -24,10 +22,7 @@ namespace Utils {
             //numberOfFoxes = numFox;
             rabbitPool = new ObjectPool<Rabbit>(rabbitPrefab, numberOfRabbits*5, transform);
             foxPool = new ObjectPool<Fox>(foxPrefab, numberOfFoxes*5, transform);
-            SpawnAnimals("Rabbit",numberOfRabbits);
-            SpawnAnimals("Fox",numberOfFoxes);
-            // SpawnFoxes(numberOfFoxes);
-            // SpawnRabbits(numberOfRabbits);
+            SpawnAll();
         }
 
         public static ObjectPool<Rabbit> GetRabbitPool() {
@@ -39,11 +34,11 @@ namespace Utils {
             return foxPool;
         }
 
-        // void Update() {
-        //     if (Input.GetKeyDown(KeyCode.R)) {
-        //         Restart();
-        //     }
-        // }
+        void Update() {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                Restart();
+            }
+        }
 
         void SpawnAnimals(GameObject animalPrefab, int n) {
             int c = 0;
@@ -85,6 +80,7 @@ namespace Utils {
             Rabbit newRabbit = (Rabbit)rabbitPool.Get();
             newRabbit.transform.position = position;
             Statistics.countRabbit++;
+            Statistics.countTotalRabbit++;
             //newRabbit.Start(); // Reset state
             // newRabbit.Initialize();
         }
@@ -93,6 +89,7 @@ namespace Utils {
             Fox newFox = (Fox)foxPool.Get();
             newFox.transform.position = position;
             Statistics.countFox++;
+            Statistics.countTotalFox++;
             //newFox.Start(); // Reset state
             //newFox.Initialize();
         }
@@ -118,21 +115,34 @@ namespace Utils {
         void DestroyAll() {
             foreach (var fox in GameObject.FindGameObjectsWithTag("Fox")) {
                 Destroy(fox);
-                // Fox.count = 0;
-                // Rabbit.c = 1;
             }
 
             foreach (var rabbit in GameObject.FindGameObjectsWithTag("Rabbit")) {
                 Destroy(rabbit);
-                // Rabbit.count = 0;
-                // Rabbit.c = 1;
             }
         }
 
-        void Restart() {
-            DestroyAll();
-            Start();
-            Invoke("Tracker.Restart", 0f);
+        void DespawnAll() {
+            foreach (var fox in GameObject.FindGameObjectsWithTag("Fox")) {
+                DespawnFox(fox.GetComponent<Fox>());
+            }
+            foreach (var rabbit in GameObject.FindGameObjectsWithTag("Rabbit")) {
+                DespawnRabbit(rabbit.GetComponent<Rabbit>());
+            }
+        }
+
+        void SpawnAll() {
+            //numberOfRabbits = numRabbit;
+            //numberOfFoxes = numFox;
+            SpawnAnimals("Rabbit",numberOfRabbits);
+            SpawnAnimals("Fox",numberOfFoxes);
+        }
+
+        public void Restart() {
+            DespawnAll();
+            // Invoke("Statistics.Restart",0f);
+            // DestroyAll();
+            // Start();
         }
 
         // void Awake() {
