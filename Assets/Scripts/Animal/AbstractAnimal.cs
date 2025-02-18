@@ -114,10 +114,12 @@ namespace Animal {
         #region EnableDisable
         void OnEnable() {
             Ticker.OnTickAction += Tick;
+            Ticker.OnTickAction += Tick05;
         }
         
         void OnDisable() {
             Ticker.OnTickAction -= Tick;
+            Ticker.OnTickAction -= Tick05;
 
         }
         #endregion
@@ -203,6 +205,10 @@ namespace Animal {
 
             currState = currentState.GetState();
             currentState?.Execute();
+        }
+
+        public void Tick05() {
+            Flock();
         }
 
         public void Update() {

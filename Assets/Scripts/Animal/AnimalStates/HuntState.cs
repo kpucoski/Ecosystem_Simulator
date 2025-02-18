@@ -7,15 +7,12 @@ namespace Animal.AnimalStates {
         private AbstractAnimal _fox;
         private Rabbit _rabbit;
         private WanderState w;
-        private float distance;
-
         public HuntState(AbstractAnimal fox) {
             _fox = fox;
             w = new WanderState(_fox) {
                 minRange = 15f,
                 maxRange = 35f
             };
-            distance = 3f;
         }
 
         public void Enter() {

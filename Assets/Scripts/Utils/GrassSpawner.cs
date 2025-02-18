@@ -9,15 +9,39 @@ public class GrassSpawner : MonoBehaviour {
     public LayerMask layerMask;
     public Vector2 positivePosition, negativePosition;
 
+    //  private static readonly GrassSpawner instance = new GrassSpawner();
+    private static GrassSpawner instance;
+
+    static GrassSpawner() {
+    }
+
+    private GrassSpawner() {
+    }
+
+    public static GrassSpawner Instance {
+        get {
+            if (instance == null) {
+                GameObject go = new GameObject();
+                instance = go.AddComponent<GrassSpawner>();
+            }
+
+            return instance;
+        }
+    }
+
+    // public static GrassSpawner Instance {
+    //     get{return instance;}
+    // }
+
     private void Start() {
         SpawnResources();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-           Restart();
-        }
-    }
+    // private void Update() {
+    //     if (Input.GetKeyDown(KeyCode.Escape)) {
+    //        Restart();
+    //     }
+    // }
 
     void SpawnResources() {
         for (float x = negativePosition.x; x < positivePosition.x; x += distanceBetweenCheck) {
@@ -51,5 +75,4 @@ public class GrassSpawner : MonoBehaviour {
     public void Restart() {
         DeleteResources();
     }
-    
 }

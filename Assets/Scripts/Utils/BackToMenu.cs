@@ -1,22 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utils;
 
 public class BackToMenu : MonoBehaviour {
-   
-    void Start() {
-        
-    }
+    // void Start() {
+
+    // }
 
     void Update() {
-       if (Input.GetKeyDown(KeyCode.Escape)) {
-        //Invoke("",0f);
-        //Invoke("Tracker.Restart", 0f);
-        //Invoke("GrassSpawner.Restart", 0f);
-        //Invoke("AnimalSpawner.Restart",0f);
-        
-        Statistics.Restart();
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-       }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Tracker.Instance.Restart();
+            GrassSpawner.Instance.Restart();
+            AnimalSpawner.Instance.Restart();
+            Statistics.Restart();
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
     }
 }
